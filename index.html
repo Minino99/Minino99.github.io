@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pasquale Loizzo — Web Boutique</title>
+    <meta
+      name="description"
+      content="Pasquale Loizzo — Full Stack Developer, DevOps & IA. Applicazioni web su misura, server VPS, automazioni e integrazioni di Intelligenza Artificiale."
+    />
+    <meta name="theme-color" content="#08080a" />
+    <meta property="og:title" content="Pasquale Loizzo — Web Boutique" />
+    <meta property="og:description" content="Full Stack Developer · DevOps & IA. Codice cucito su misura, dal pixel al server." />
+    <meta property="og:image" content="https://minino99.github.io/pasquale.jpg" />
+    <meta property="og:url" content="https://minino99.github.io/" />
+    <link rel="canonical" href="https://minino99.github.io/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <style>html,body{color:#efeae2;background:#08080a;margin:0}:where(.loader,.hud) svg{width:0;height:0}</style>
+    <script type="module" crossorigin src="/assets/index-C03df18c.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CvsrUjTq.css">
+  </head>
+  <body class="is-loading">
+    <!-- ============ PRELOADER ============ -->
+    <div class="loader" id="loader" aria-hidden="true">
+      <div class="loader__inner">
+        <div class="loader__gauge">
+          <svg viewBox="0 0 200 200" class="loader__svg">
+            <circle class="loader__track" cx="100" cy="100" r="86" />
+            <circle class="loader__bar" id="loaderBar" cx="100" cy="100" r="86" />
+          </svg>
+          <div class="loader__count"><span id="loaderCount">0</span><small>%</small></div>
+        </div>
+        <div class="loader__status mono" id="loaderStatus">KEY ON</div>
+        <div class="loader__brand">Pasquale Loizzo <em>Web Boutique</em></div>
+      </div>
+      <div class="loader__shutter loader__shutter--top"></div>
+      <div class="loader__shutter loader__shutter--bottom"></div>
+    </div>
+
+    <!-- ============ 3D + OVERLAYS ============ -->
+    <canvas id="webgl" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label"></span></div></div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+      <a href="#top" class="nav__logo" data-scroll-to aria-label="Home">
+        <span class="nav__mono">PL</span>
+        <span class="nav__name">Pasquale Loizzo<em>Web Boutique</em></span>
+      </a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#about" data-scroll-to data-i18n="nav.about"></a>
+        <a href="#skills" data-scroll-to data-i18n="nav.skills"></a>
+        <a href="#experience" data-scroll-to data-i18n="nav.experience"></a>
+        <a href="#projects" data-scroll-to data-i18n="nav.projects"></a>
+        <a href="#contact" data-scroll-to data-i18n="nav.contact"></a>
+      </nav>
+      <div class="nav__tools">
+        <button class="sound-btn" id="soundBtn" type="button" aria-pressed="false" data-cursor="sound">
+          <span class="sound-btn__bars"><i></i><i></i><i></i><i></i></span>
+          <span class="mono" data-i18n="nav.sound"></span>
+        </button>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="it">IT</button><span>/</span><button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" data-scroll-to data-i18n="nav.about"></a>
+      <a href="#skills" data-scroll-to data-i18n="nav.skills"></a>
+      <a href="#experience" data-scroll-to data-i18n="nav.experience"></a>
+      <a href="#projects" data-scroll-to data-i18n="nav.projects"></a>
+      <a href="#contact" data-scroll-to data-i18n="nav.contact"></a>
+    </div>
+
+    <!-- ============ HUD (tachometer) ============ -->
+    <aside class="hud" aria-hidden="true">
+      <div class="hud__gauge">
+        <svg viewBox="0 0 160 160" id="tachSvg"></svg>
+        <div class="hud__readout">
+          <span class="hud__rpm mono" id="hudRpm">0</span>
+          <span class="hud__unit mono">RPM</span>
+        </div>
+        <div class="hud__shift" id="hudShift"></div>
+      </div>
+      <div class="hud__gear">
+        <span class="mono hud__gear-label">GEAR</span>
+        <span class="hud__gear-value" id="hudGear">N</span>
+      </div>
+    </aside>
+
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero section" id="hero" data-gear="N">
+        <div class="hero__content">
+          <p class="eyebrow mono"><span class="dot"></span><span data-i18n="hero.eyebrow"></span></p>
+          <h1 class="hero__title">
+            <span class="hero__line" data-split>Pasquale</span>
+            <span class="hero__line" data-split>Loizzo</span>
+          </h1>
+          <div class="hero__boutique"><span class="outline-shine">Web Boutique</span></div>
+          <p class="hero__lead" data-i18n="hero.lead"></p>
+          <div class="hero__ctas">
+            <a href="#about" class="btn btn--primary" data-scroll-to data-magnetic><span data-i18n="hero.cta1"></span><i class="btn__arrow">↓</i></a>
+            <a href="#contact" class="btn btn--ghost" data-scroll-to data-magnetic><span data-i18n="hero.cta2"></span></a>
+          </div>
+        </div>
+        <div class="hero__meta mono">
+          <div><span class="muted" data-i18n="hero.based"></span><br />Gravina in Puglia · IT</div>
+          <div><span class="muted">40.82°N 16.42°E</span><br /><span id="clock">--:--:--</span> CET</div>
+          <div><span class="muted" data-i18n="hero.role"></span><br />BrainTech.software</div>
+        </div>
+        <div class="hero__scroll mono"><span class="hero__scroll-line"></span><span data-i18n="hero.scroll"></span></div>
+      </section>
+
+      <!-- ============ MARQUEE ============ -->
+      <div class="marquee" data-marquee aria-hidden="true">
+        <div class="marquee__track">
+          <span>Full Stack</span><b>✦</b><span>DevOps</span><b>✦</b><span>Intelligenza Artificiale</span><b>✦</b><span>Automazioni</span><b>✦</b><span>Server VPS</span><b>✦</b><span>MVC</span><b>✦</b>
+        </div>
+      </div>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="about section" id="about" data-gear="1">
+        <div class="section-head">
+          <span class="section-head__num">01</span>
+          <span class="section-head__code mono" data-i18n="about.code"></span>
+          <h2 class="section-head__title" data-reveal data-i18n="about.title"></h2>
+        </div>
+        <div class="about__grid">
+          <figure class="about__photo" data-reveal data-tilt>
+            <div class="about__photo-frame">
+              <img src="/pasquale.jpg" alt="Pasquale Loizzo" width="480" height="480" loading="lazy" />
+              <div class="about__photo-scan"></div>
+            </div>
+            <figcaption class="mono"><span>PL-001</span><span data-i18n="about.caption"></span></figcaption>
+            <span class="corner corner--tl"></span><span class="corner corner--tr"></span><span class="corner corner--bl"></span><span class="corner corner--br"></span>
+          </figure>
+          <div class="about__text">
+            <p class="about__big" data-reveal data-i18n="about.p1"></p>
+            <p class="about__p" data-reveal data-i18n="about.p2"></p>
+            <div class="stats">
+              <div class="stat" data-reveal><span class="stat__num" data-count="4" data-suffix="+">0</span><span class="stat__label" data-i18n="about.s1"></span></div>
+              <div class="stat" data-reveal><span class="stat__num" data-count="700" data-suffix="+">0</span><span class="stat__label" data-i18n="about.s2"></span></div>
+              <div class="stat" data-reveal><span class="stat__num" data-count="3">0</span><span class="stat__label" data-i18n="about.s3"></span></div>
+              <div class="stat" data-reveal><span class="stat__num">C1</span><span class="stat__label" data-i18n="about.s4"></span></div>
+            </div>
+            <div class="edu" data-reveal>
+              <h3 class="mono" data-i18n="about.eduTitle"></h3>
+              <ul id="eduList"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section class="skills section" id="skills" data-gear="2">
+        <div class="section-head">
+          <span class="section-head__num">02</span>
+          <span class="section-head__code mono" data-i18n="skills.code"></span>
+          <h2 class="section-head__title" data-reveal data-i18n="skills.title"></h2>
+          <p class="section-head__sub" data-reveal data-i18n="skills.sub"></p>
+        </div>
+        <div class="skills__grid" id="skillsGrid"></div>
+      </section>
+
+      <div class="marquee marquee--alt" data-marquee data-direction="-1" aria-hidden="true">
+        <div class="marquee__track" id="skillsMarquee"></div>
+      </div>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section class="experience section" id="experience" data-gear="3">
+        <div class="section-head">
+          <span class="section-head__num">03</span>
+          <span class="section-head__code mono" data-i18n="exp.code"></span>
+          <h2 class="section-head__title" data-reveal data-i18n="exp.title"></h2>
+          <p class="section-head__sub" data-reveal data-i18n="exp.sub"></p>
+        </div>
+        <div class="experience__wrap">
+          <div class="shifter" aria-hidden="true">
+            <div class="shifter__sticky">
+              <svg viewBox="0 0 220 240" class="shifter__svg">
+                <path class="shifter__gate" d="M40 40 V200 M110 40 V200 M180 40 V200 M40 120 H180" />
+                <g class="shifter__labels mono">
+                  <text x="40" y="26">1</text><text x="40" y="226">2</text>
+                  <text x="110" y="26">3</text><text x="110" y="226">4</text>
+                  <text x="180" y="26">5</text><text x="180" y="226">R</text>
+                </g>
+                <g id="shifterKnob" class="shifter__knob">
+                  <circle r="20" />
+                  <circle r="9" class="shifter__knob-core" />
+                </g>
+              </svg>
+              <div class="shifter__caption mono"><span data-i18n="exp.gear"></span> <b id="shifterGear">1</b></div>
+            </div>
+          </div>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section class="projects section" id="projects" data-gear="4">
+        <div class="section-head">
+          <span class="section-head__num">04</span>
+          <span class="section-head__code mono" data-i18n="proj.code"></span>
+          <h2 class="section-head__title" data-reveal data-i18n="proj.title"></h2>
+          <p class="section-head__sub" data-reveal data-i18n="proj.sub"></p>
+        </div>
+        <div class="projects__grid" id="projectsGrid"></div>
+        <div class="projects__more" data-reveal>
+          <a href="https://github.com/Minino99" target="_blank" rel="noopener" class="btn btn--ghost" data-magnetic><span data-i18n="proj.more"></span><i class="btn__arrow">↗</i></a>
+        </div>
+      </section>
+
+      <!-- ============ INTERESTS ============ -->
+      <section class="interests section" id="interests" data-gear="5">
+        <div class="section-head">
+          <span class="section-head__num">05</span>
+          <span class="section-head__code mono" data-i18n="int.code"></span>
+          <h2 class="section-head__title" data-reveal data-i18n="int.title"></h2>
+        </div>
+        <ul class="interests__list" id="interestsList"></ul>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact section" id="contact" data-gear="6">
+        <div class="contact__inner">
+          <span class="section-head__code mono" data-i18n="contact.code"></span>
+          <h2 class="contact__title" data-reveal data-i18n="contact.title"></h2>
+          <p class="contact__sub" data-reveal data-i18n="contact.sub"></p>
+
+          <button class="start-btn" id="startBtn" type="button" data-cursor="rev">
+            <span class="start-btn__ring"></span>
+            <span class="start-btn__face">
+              <span class="start-btn__top mono">ENGINE</span>
+              <span class="start-btn__main">START</span>
+              <span class="start-btn__bot mono">STOP</span>
+            </span>
+          </button>
+          <p class="contact__hint mono" data-i18n="contact.hint"></p>
+
+          <a class="contact__mail" href="mailto:loizzo.pasqualino@gmail.com" data-magnetic data-cursor="mail">loizzo.pasqualino@gmail.com</a>
+          <div class="contact__links">
+            <a href="https://www.linkedin.com/in/pasqualeloizzo-dev" target="_blank" rel="noopener" class="pill" data-magnetic>LinkedIn ↗</a>
+            <a href="https://github.com/Minino99" target="_blank" rel="noopener" class="pill" data-magnetic>GitHub ↗</a>
+            <a href="mailto:loizzo.pasqualino@gmail.com" class="pill" data-magnetic>Email ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer mono">
+      <span>© <span id="year"></span> Pasquale Loizzo — Web Boutique</span>
+      <span data-i18n="footer.built"></span>
+      <a href="#top" data-scroll-to data-i18n="footer.top"></a>
+    </footer>
+
+  </body>
+</html>
